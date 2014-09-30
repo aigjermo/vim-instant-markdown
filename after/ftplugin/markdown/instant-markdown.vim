@@ -24,7 +24,7 @@ function! s:refreshView()
 endfu
 
 function! s:startDaemon(initialMD)
-    call s:system("markmon -p 3000 &>/dev/null &", a:initialMD)
+    call s:system("markmon -p 3000 --command \"pandoc --self-contained -t HTML5\" &>/dev/null &", a:initialMD)
 endfu
 
 function! s:initDict()
